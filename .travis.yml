@@ -4,12 +4,6 @@ script:
 - env
 - go version
 - echo $MY_SECRET_ENV
-deploy:
-  provider: script
-  script: echo 'hello'
-  on:
-    tags: true
-    all_branches: true
 env:
   global:
     secure: p3dy6RXzgtsCSF795A8gXm99vTqfm/EFbgwSjmwoczu+oqHUsEshChiTinGAgpmv1Wf+oVp4Kn+/F3NmCsz1m0uP5//h5PQdrai7mQXV5DIuUsfg6MMnAD3t+LYqGslziWrHpB1nlIm0X7XGH8hXQRvWzmSJSyIp1zkvi4ooE0v+yzGUBsGT/vRhtoVp/MPq6DhkjcxcGjB0+lUBug53e2tcNokDZYPhdBoekLMizWBOc2w+SsdeJHlxj830nET3xLrLrI+KRXeZrjCWl6UxYC4jTptbgZlkKZuPtb990mxFBsGoLw1UpWxXPvkiAb3EfFTRWerwXMG/3lETT0liRXIo/9bePSfBEH2rbCYI+DN1nPt6w6t5k/HTMczh3WBFYAAIjJSP0LF1/7YYp34/jwL8fhsljqxDnEkybnNhWMbThx2DdpaArbi7yfLdO7wZJ7syQvRveeDB2yLFif3Xnhy6tsHiSVjvNOh5rjZxeacm2IxZPDGBLlWkyKeJEhWN+YxkPg8HUILX1Ykl5iUqWpJcIqqokVx4KKWhVerb/gGMzNXYUWf2KAgH8homMU3GHpQnvtn4v5RQQI2Gkh7XR2d5P2UCmbLXpuPh+hPqq5QeNlAZ3BGoYSOX/nJZbMIrrhU4lQsV6Uwayzm8GqKEBUewdxIJZQOV+oesbgrWGyM=
