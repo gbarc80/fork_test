@@ -1,14 +1,14 @@
-dist: bionic
-language: c++
-script: g++ -o test.elf test.cpp && ./test.elf
-addons:
-  coverity_scan:
-    project:
-      name: gbarc80/fork_test_prv
-      version: 1.0
-      description: testproject
-    build_command: g++ -o test.elf test.cpp
-    branch_pattern: coverity_scan
+language: go
+script:
+- env
+- go version
+- echo $MY_SECRET_ENV
+deploy:
+  provider: script
+  script: echo 'hello'
+  on:
+    tags: true
+    all_branches: true
 env:
   global:
-    secure: eUTHDUd3e61D+DgWN344MkcTUCPQJvOtJqb57oiFfa+e13wD8U27HOETez3BDHyRKJRu3HPO45OcyRA6c1agLvxaTSMakFdDsKxKiHKo8E6cwlEk6WD8UOVpa7KLzobJ5AfIsAuOx/PHX1Xz2i2eayLue1hWHrrwWwAivducPdHVXKlkamJIpiuBzTW/bRVlkN0dcOD1qMkVRH6WAYRTU5WrEru3A+wqg6+jmeUpzQuWuVumaQajiVenLwpybxqzeO+z7i6D7wL0zVyYbwbZQ3x2+7GdIsqZnxQmhehdl8pmlG/+UbiOuVkkOs97L0O2zrnj001yeamhhhzKWJhbVsLjznIoUEcdx0wPJtenxt6ingjQQh9GGrckdXE68z1aIx48t1VNpHiZ5oyokQ7r640QDa7SBCEjGYjqlDFHioDkfjvCjCo7utynZhPljYQ/sz8rEXsbPlby39J8cK41E7YzazB6ak45C6FaqsGjCaXMXlM0Gmz87VVcWC/NaVXUZ4W1naX6czaGl236XSoA4oc8rjSeB9mADsN/Zi8lpRd3z9yA6z7TlFNt3I0lIbs0kQUXhQYsaqx/lRogHKiRzxpkVucDpSTfdSF2m0ChOGaNcewbugWacBETE4EPWvtsQPHsgT59pp1+HePFqHeyfiqzv+oel3hpEK+Z8L6Lgpw=
+    secure: p3dy6RXzgtsCSF795A8gXm99vTqfm/EFbgwSjmwoczu+oqHUsEshChiTinGAgpmv1Wf+oVp4Kn+/F3NmCsz1m0uP5//h5PQdrai7mQXV5DIuUsfg6MMnAD3t+LYqGslziWrHpB1nlIm0X7XGH8hXQRvWzmSJSyIp1zkvi4ooE0v+yzGUBsGT/vRhtoVp/MPq6DhkjcxcGjB0+lUBug53e2tcNokDZYPhdBoekLMizWBOc2w+SsdeJHlxj830nET3xLrLrI+KRXeZrjCWl6UxYC4jTptbgZlkKZuPtb990mxFBsGoLw1UpWxXPvkiAb3EfFTRWerwXMG/3lETT0liRXIo/9bePSfBEH2rbCYI+DN1nPt6w6t5k/HTMczh3WBFYAAIjJSP0LF1/7YYp34/jwL8fhsljqxDnEkybnNhWMbThx2DdpaArbi7yfLdO7wZJ7syQvRveeDB2yLFif3Xnhy6tsHiSVjvNOh5rjZxeacm2IxZPDGBLlWkyKeJEhWN+YxkPg8HUILX1Ykl5iUqWpJcIqqokVx4KKWhVerb/gGMzNXYUWf2KAgH8homMU3GHpQnvtn4v5RQQI2Gkh7XR2d5P2UCmbLXpuPh+hPqq5QeNlAZ3BGoYSOX/nJZbMIrrhU4lQsV6Uwayzm8GqKEBUewdxIJZQOV+oesbgrWGyM=
